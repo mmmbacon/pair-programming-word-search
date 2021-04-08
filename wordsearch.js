@@ -24,14 +24,11 @@ const wordSearch = (letters, word) => {
     } else {
       let transposed = transposeArray(letters);
       const verticalJoin = transposed.map(ls => ls.join(''));
-      //Iterate through array values in horizontalJoin and check for letter
+      //Iterate through array values in verticalJoin and check for letter
       for (let l of verticalJoin) {
         //Find exact match in string
         if (l.includes(word)) {
           result = true;
-        } else {
-          let transposed = transposeArray(letters);
-          
         }
       }
     }
